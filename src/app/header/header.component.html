@@ -1,0 +1,35 @@
+<p-menubar [model]="items" styleClass="surface-50" (click)="activeMenu($event)">
+  <ng-template pTemplate="start">
+    <div class="mx-2 text-lg" *ngIf="!isMobile">
+      {{ title }}
+    </div>
+  </ng-template>
+
+  <ng-template pTemplate="end">
+    <div class="flex">
+      <div *ngIf="isMobile" class="flex text-lg align-items-center mx-2">
+        {{ title }}
+      </div>
+
+      <button
+        pButton
+        type="button"
+        label="Options Btn"
+        class="p-button-text text-800 hover:surface-100 mx-1"
+      ></button>
+
+      <div class="flex align-items-center mx-1">
+        <p-toggleButton
+          onLabel="Showing Menu"
+          offLabel="Hiding Menu"
+          onIcon="pi pi-check"
+          offIcon="pi pi-times"
+          [(ngModel)]="visible"
+          (onChange)="initMenu()"
+        ></p-toggleButton>
+      </div>
+
+      <input class="flex mx-2" type="text" pInputText placeholder="Search" />
+    </div>
+  </ng-template>
+</p-menubar>

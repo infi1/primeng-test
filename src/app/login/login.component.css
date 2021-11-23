@@ -1,0 +1,5 @@
+::ng-deep .p-card {
+  max-width: 544px;
+  margin: 8vw auto;
+  background-color: var(--surface-50);
+}

@@ -1,0 +1,88 @@
+<div class="grid">
+  <div class="col">
+    <h5>Input Testing</h5>
+
+    <div class="formgroup-inline">
+      <div class="field">
+        <span class="p-float-label mt-4">
+          <input
+            type="text"
+            id="username"
+            pInputText
+            class="surface-50 hover:surface-100"
+          />
+          <label for="username">Username</label>
+        </span>
+        <span class="p-float-label mt-4">
+          <input
+            type="email"
+            id="email"
+            pInputText
+            class="surface-50 hover:surface-100"
+          />
+          <label for="email">E-Mail</label>
+        </span>
+      </div>
+
+      <div class="field">
+        <div class="field grid mt-4">
+          <label for="firstname" class="col-fixed" style="width: 100px"
+            >Firstname</label
+          >
+          <div class="col">
+            <input
+              pInputText
+              id="firstname"
+              type="text"
+              class="surface-100 hover:surface-200"
+            />
+          </div>
+        </div>
+
+        <div class="field grid mt-4">
+          <label for="lastname" class="col-fixed" style="width: 100px"
+            >Lastname</label
+          >
+          <div class="col">
+            <input
+              pInputText
+              id="lastname"
+              type="text"
+              class="surface-100 hover:surface-200"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <h5>Show/Hide Version (Customized)</h5>
+    <p-toggleButton
+      [(ngModel)]="checked2"
+      onLabel="Showing ver."
+      offLabel="Hiding ver."
+      onIcon="pi pi-check"
+      offIcon="pi pi-times"
+      [style]="{ width: '10em' }"
+      (onChange)="onVersion()"
+    ></p-toggleButton>
+
+    <div *ngIf="checked2">
+      <h5>Version</h5>
+      <p>v{{ pkg.version }}</p>
+    </div>
+  </div>
+
+  <div class="col">
+    <h5>Show/Hide Calendar</h5>
+    <p-toggleButton
+      [(ngModel)]="checked1"
+      onIcon="pi pi-check"
+      offIcon="pi pi-times"
+    ></p-toggleButton>
+
+    <div *ngIf="checked1">
+      <h5>Calender</h5>
+      <p-calendar [inline]="true" (onSelect)="showDate($event)"></p-calendar>
+    </div>
+  </div>
+</div>

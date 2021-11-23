@@ -1,0 +1,13 @@
+/* You can add global styles to this file, and also import other style files */
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--surface-a);
+  color: var(--text-color);
+  font-family: var(--font-family);
+}
+
+main {
+  padding: 1em;
+}

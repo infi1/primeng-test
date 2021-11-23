@@ -1,0 +1,9 @@
+:host >>> .p-menuitem-link-active {
+  border-color: var(--primary-color);
+  border-style: dashed;
+  border-top-width: 0;
+  border-bottom-width: 0;
+  border-right-width: 2px;
+  border-left-width: 2px;
+  background-color: rgba(0, 0, 0, 0.1);
+}

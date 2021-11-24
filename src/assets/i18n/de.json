@@ -1,18 +1,117 @@
 {
   "header": {
     "home": "Zuhause",
-    "login": "Einloggen",
-    "translate": "Übersetzen",
-    "themes": "Designs",
     "lang": {
-      "en": "Englisch",
-      "de": "Deutsch"
-    }
+      "de": "Deutsch",
+      "en": "Englisch"
+    },
+    "login": "Einloggen",
+    "themes": "Designs",
+    "translate": "Übersetzen"
+  },
+  "home": {
+    "calendar": "Kalender"
   },
   "login": {
-    "title": "Einloggen",
-    "username": "Benutzername",
+    "btnLabel": "Anmelden",
     "password": "Passwort",
-    "btn_label": "Anmelden"
+    "title": "Einloggen",
+    "userName": "Benutzername"
+  },
+  "primeng": {
+    "accept": "Ja",
+    "addRule": "Regel hinzufügen",
+    "after": "Danach",
+    "apply": "Übernehmen",
+    "before": "Bevor",
+    "cancel": "Abbrechen",
+    "choose": "Wählen",
+    "clear": "Löschen",
+    "contains": "Enthält",
+    "dateAfter": "Datum ist nach",
+    "dateBefore": "Datum ist vor",
+    "dateFormat": "dd.mm.yy",
+    "dateIs": "Datum ist",
+    "dateIsNot": "Datum ist nicht",
+    "dayNames": {
+      "0": "Sonntag",
+      "1": "Montag",
+      "2": "Dienstag",
+      "3": "Mittwoch",
+      "4": "Donnerstag",
+      "5": "Freitag",
+      "6": "Samstag"
+    },
+    "dayNamesMin": {
+      "0": "So",
+      "1": "Mo",
+      "2": "Di",
+      "3": "Mi",
+      "4": "Do",
+      "5": "Fr",
+      "6": "Sa"
+    },
+    "dayNamesShort": {
+      "0": "Son",
+      "1": "Mon",
+      "2": "Die",
+      "3": "Mit",
+      "4": "Don",
+      "5": "Fre",
+      "6": "Sam"
+    },
+    "emptyFilterMessage": "Keine Ergebnise gefunden",
+    "emptyMessage": "Keine Ergebnisse gefunden",
+    "endsWith": "Endet mit",
+    "equals": "Ist gleich",
+    "gt": "Größer als",
+    "gte": "Größer oder gleich als",
+    "is": "Ist",
+    "isNot": "Ist nicht",
+    "lt": "Kleiner als",
+    "lte": "Kleiner oder größer als",
+    "matchAll": "Match Alle",
+    "matchAny": "Match Beliebig",
+    "medium": "Mittel",
+    "monthNames": {
+      "0": "Januar",
+      "1": "Februar",
+      "2": "März",
+      "3": "April",
+      "4": "Mai",
+      "5": "Juni",
+      "6": "Juli",
+      "7": "August",
+      "8": "September",
+      "9": "Oktober",
+      "10": "November",
+      "11": "Dezember"
+    },
+    "monthNamesShort": {
+      "0": "Jan",
+      "1": "Feb",
+      "2": "Mär",
+      "3": "Apr",
+      "4": "Mai",
+      "5": "Jun",
+      "6": "Jul",
+      "7": "Aug",
+      "8": "Sep",
+      "9": "Okt",
+      "10": "Nov",
+      "11": "Dez"
+    },
+    "noFilter": "Kein Filter",
+    "notContains": "Enthält nicht",
+    "notEquals": "Nicht gleich",
+    "passwordPrompt": "Passwort eingeben",
+    "reject": "Nein",
+    "removeRule": "Regel löschen",
+    "startsWith": "Startet mit",
+    "strong": "Stark",
+    "today": "Heute",
+    "upload": "Hochladen",
+    "weak": "Schwach",
+    "weekHeader": "Wo"
   }
 }

@@ -17,10 +17,13 @@ export class AppComponent implements OnInit {
   ngOnInit() {
     this.primengConfig.ripple = true;
 
-    this.translate.addLangs(['en', 'fr']);
-    this.translate.setDefaultLang('en');
+    this.translate.addLangs(['en', 'de']);
+    // this.translate.setDefaultLang('en');
 
     const browserLang = this.translate.getBrowserLang();
-    this.translate.use(browserLang.match(/en|fr/) ? browserLang : 'en');
+    this.translate.use(browserLang.match(/en|de/) ? browserLang : 'en');
+    this.translate.get('primeng').subscribe((res) => {
+      this.primengConfig.setTranslation(res);
+    });
   }
 }

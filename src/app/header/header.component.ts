@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 
-import { MenuItem, PrimeIcons } from 'primeng/api';
-import { Subscription } from 'rxjs';
+import { MenuItem, PrimeIcons, PrimeNGConfig } from 'primeng/api';
 
 @Component({
   selector: 'app-header',
@@ -15,7 +14,10 @@ export class HeaderComponent implements OnInit {
   title = 'DISCONT // WWW // SPHERE';
   visible = true;
 
-  constructor(public translate: TranslateService) {}
+  constructor(
+    public translate: TranslateService,
+    // private primengConfig: PrimeNGConfig
+  ) {}
 
   ngOnInit(): void {
     this.initMenu('header');
@@ -108,6 +110,9 @@ export class HeaderComponent implements OnInit {
 
   changeLang(lang: string) {
     this.translate.use(lang);
+    // this.translate
+    //   .get('primeng')
+    //   .subscribe((res) => this.primengConfig.setTranslation(res));
     this.initMenu('header');
   }
 }

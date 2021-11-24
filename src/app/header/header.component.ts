@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 
 import { MenuItem, PrimeIcons } from 'primeng/api';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-header',
@@ -13,10 +15,10 @@ export class HeaderComponent implements OnInit {
   title = 'DISCONT // WWW // SPHERE';
   visible = true;
 
-  constructor() {}
+  constructor(public translate: TranslateService) {}
 
   ngOnInit(): void {
-    this.initMenu();
+    this.initMenu('header');
 
     this.isMobile = this.getIsMobile();
     window.onresize = () => {
@@ -37,26 +39,39 @@ export class HeaderComponent implements OnInit {
 
   changeTheme(theme: string) {
     let themeElement = document.getElementById('theme-link');
+    // console.log(navigator.language);
     // const currentThemeHref = themeElement.getAttribute('href');
     themeElement.setAttribute('href', `assets/themes/${theme}.css`);
   }
 
-  initMenu() {
+  buildMenu(labels) {
     this.items = [
       {
-        label: 'Home',
+        label: labels.home, // Home',
         routerLink: ['/home'],
         visible: this.visible,
       },
       {
-        label: 'Login',
+        label: labels.login,
         routerLink: ['/login'],
         visible: this.visible,
       },
       {
-        label: 'Themes',
+        label: labels.translate,
+        items: [
+          {
+            label: labels.lang.en,
+            command: () => this.changeLang('en'),
+          },
+          {
+            label: labels.lang.de,
+            command: () => this.changeLang('de'),
+          },
+        ],
+      },
+      {
+        label: labels.themes,
         icon: PrimeIcons.COG,
-        styleClass: 'right',
         items: [
           {
             label: 'Arya Green',
@@ -80,6 +95,19 @@ export class HeaderComponent implements OnInit {
   }
 
   activeMenu(event) {
-    console.log(event.target.classList);
+    // console.log(event.target.classList);
+  }
+
+  initMenu(key: string) {
+    // console.log(key);
+    this.translate.get(key).subscribe((labels) => {
+      // console.log(res);
+      this.buildMenu(labels);
+    });
+  }
+
+  changeLang(lang: string) {
+    this.translate.use(lang);
+    this.initMenu('header');
   }
 }

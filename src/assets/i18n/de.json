@@ -1,0 +1,18 @@
+{
+  "header": {
+    "home": "Zuhause",
+    "login": "Einloggen",
+    "translate": "Übersetzen",
+    "themes": "Designs",
+    "lang": {
+      "en": "Englisch",
+      "de": "Deutsch"
+    }
+  },
+  "login": {
+    "title": "Einloggen",
+    "username": "Benutzername",
+    "password": "Passwort",
+    "btn_label": "Anmelden"
+  }
+}

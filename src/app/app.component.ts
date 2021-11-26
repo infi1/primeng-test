@@ -18,7 +18,7 @@ export class AppComponent implements OnInit {
     this.primengConfig.ripple = true;
 
     this.translate.addLangs(['en', 'de']);
-    // this.translate.setDefaultLang('en');
+    // this.translate.setDefaultLang('de');
 
     const browserLang = this.translate.getBrowserLang();
     this.translate.use(browserLang.match(/en|de/) ? browserLang : 'en');

@@ -12,6 +12,7 @@ import { MessageService } from 'primeng/api';
 import { MenubarModule } from 'primeng/menubar';
 import { InputTextModule } from 'primeng/inputtext';
 import { CardModule } from 'primeng/card';
+import { SlideMenuModule } from 'primeng/slidemenu';
 
 import { HeaderComponent } from './header/header.component';
 import { LoginComponent } from './login/login.component';
@@ -28,12 +29,7 @@ export function HttpLoaderFactory(http: HttpClient) {
 }
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    HeaderComponent,
-    LoginComponent,
-    HomeComponent,
-  ],
+  declarations: [AppComponent, HeaderComponent, LoginComponent, HomeComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -45,9 +41,10 @@ export function HttpLoaderFactory(http: HttpClient) {
     ToastModule,
     MenubarModule,
     InputTextModule,
+    SlideMenuModule,
     CardModule,
     TranslateModule.forRoot({
-      defaultLanguage: 'en',
+      defaultLanguage: 'de',
       loader: {
         provide: TranslateLoader,
         useFactory: HttpLoaderFactory,
